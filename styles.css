@@ -1,10 +1,11 @@
 /* aside bar */
 
 aside{
-    max-width: 30em;
+    width: 40vw;
     background-color: #BDCBDB;
     text-align: left;
-    padding: 1em 3em;
+    text-wrap: wrap;
+    padding: 1em 1em;
 }
 
 h2.side_heading{
@@ -16,7 +17,8 @@ h2.side_heading{
 
 p.side_text{
     font-weight: 400;
-    color: #F8EFE8;
+    font-size: 12pt;
+    color: #261803;
     max-width: inherit;
     text-wrap: wrap;
 }
@@ -28,24 +30,12 @@ a.asidelink{
     font-weight: 700;
 }
 
-a.droplink{
-    color: #b0c4de;
-    font-size: 18pt;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 700;
-    margin: 0.75em 0em;
+a:visited{
+    color: #261803;
 }
 
-p.droplink{
-    color: #b0c4de;
-    font-size: 18pt;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 700;
-    margin: 0.75em 0em;
-}
-
-a:visited.asidelink{
-    color: lightsteelblue;
+ul{
+    list-style-image: url(images/page_icons/pin.svg);
 }
 
 input[type=text].search{
@@ -70,7 +60,7 @@ img.icon{
     max-height: 25px;
 }
 
-img.dish_card{
+img.card{
     border-radius: 7px;
     max-width: 250px;
     max-height: 300px;
@@ -141,7 +131,7 @@ header.clear{
 }
 
 .dish_card_blue{
-    background-color: #90A8C3;
+    background-color: #BDCBDB;
     border-radius: 7px 7px 0px 0px;
     text-align: center;
     padding: 1em;
@@ -168,7 +158,7 @@ section{
     text-align: center;
     margin: 3em 3em;
     border-radius: 10px;
-    padding: 0 1em;
+    padding: 0.25em 1em;
     height: fit-content;
 }
 
@@ -180,6 +170,10 @@ section{
     background-color: #90A8C3;
 }
 
+.textbox_green{
+    background-color: #3F4739;
+}
+
 hr{
     align: center;
     color: #4C5A6B;
@@ -187,71 +181,70 @@ hr{
     width: 80vw;
 }
 
-/* forms */
+/* footer */
 
-.form{
-    padding: 1em 2em;
+footer{
+    background-color: #DED8CE;
+    width: 100%;
+    max-height: max(fit-content, 100vh);
+    text-align: center;
+    padding: 1em 1em;
 }
 
 input[type=text].small_input{
-    background-color:white;
-    border: 2px solid black;
-    color: black;
-    font-family: "Space Mono", monospace;
+    background-color:#F6F2F7;
+    border: 2px solid #3F4739;
+    color: #3F4739;
+    font-family: "Noto Sans", sans-serif;
     font-size: 14pt;
     max-width: 50%;
     padding: 0.5em 1em;
 }
 
-input[type=file]{
-    border: 3px solid #4C5A6B;
-    padding: 4em;
-    font-size: 12pt;
-}
-
 textarea.small_input{
-    background-color:white;
-    border: 2px solid black;
+    background-color:#F6F2F7;
+    border: 2px solid #3F4739;
     color: black;
-    font-family: "Space Mono", monospace;
+    font-family: "Noto Sans", sans-serif;
     font-size: 14pt;
     max-width: 50%;
     padding: 0.5em 1em;
 }
 
 textarea.large_input{
-    background-color:white;
-    border: 2px solid black;
+    background-color:#F6F2F7;
+    border: 2px solid #3F4739;
     color: black;
-    font-family: "Space Mono", monospace;
+    font-family: "Noto Sans", sans-serif;
     font-size: 14pt;
     width: 60%;
     height: fit-content;
-    transition: width ease-in-out 0.3s;
     padding: 0.5em 1em;
 }
 
 button{
+    display: block;
     border-radius: 7px;
-    background-color: #4C5A6B;
-    font-family: "Space Mono", monospace;
+    background-color: #3F4739;
+    color: #F6F2F7;
+    font-family: "Noto Sans", sans-serif;
     font-size: 14pt;
-    margin: 1em 3em;
+    margin: 1em auto;
     padding: 0.5em;
     width: 10em;
 }
 
 button:hover{
-    color: #F2F6F8;
-    background-color: #B0C4DE;
-    border-color: #B0C4DE;
+    color: #261803;
+    background-color: #BDCBDB;
+    border-color: #3F4739;
 }
 
 
 /* text formatting */
 
 h1{
-    font-size: 32pt;
+    font-size: 40pt;
     font-family: "Epunda Sans", sans-serif;
     text-align: center;
     font-weight: 900;
@@ -271,6 +264,15 @@ h2{
 h2.light{
     color: #F2F6F8;
     font-weight: 700;
+}
+
+h3{
+    color: #261803;
+    font-family: "Epunda Sans", sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 18pt;
+    text-align: center;
 }
 
 p{
