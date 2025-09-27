@@ -12,10 +12,13 @@ let cart = 0;
 const cartTotal = document.querySelector('#cart_total');
 cartTotal.textContent = "TOTAL: " + cart;
 
-console.log(dishes);
+pageBody.addEventListener("DOMContentLoaded", loadButtons())
 
-function addButtons(event){
-    console.log("on body click");
+function loadButtons(event){
+    let allBtns = document.querySelectorAll('button');
+    for (const btn of allBtns){
+        btn.classList.remove('hidden')
+    }
     return; 
 }
 
@@ -27,6 +30,7 @@ function favoriteDish(event){
     // add a dish to the fav list
     let card = event.currentTarget.parentElement;
     let price = parseInt(card.querySelector("#price span").textContent);
+    card.classList.add('highlight');
 
     let favCard = document.createElement("div.fav_card");
     favBox.appendChild(favCard);
@@ -55,14 +59,12 @@ function favoriteDish(event){
 function unFav(event){
     let card = event.currentTarget.parentElement;
     let dishTitle = card.querySelector("h3").textContent;
+    card.classList.remove('highlight');
     
     for (const child of favBox.childNodes) {
         for (const grandchild of child.childNodes){
-            // console.log("grandchild",grandchild.textContent);
-            // console.log("dishtitle",dishTitle);
             if (grandchild == dishTitle){
-                // console.log("match");
-                favBox.remove(child);
+                favBox.removeChild(child);
             };
         }
     }

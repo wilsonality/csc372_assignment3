@@ -183,6 +183,15 @@ hr{
 
 /* favorites */
 
+button.hidden{
+    display: none;
+}
+
+.highlight{
+    border: 5px solid goldenrod;
+
+}
+
 #favorites{
     /* sticky element at bottom that shows favorites */
     position: sticky;
