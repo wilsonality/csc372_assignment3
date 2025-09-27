@@ -33,7 +33,8 @@ function favoriteDish(event){
     
     let dishTitle = card.querySelector("h3").textContent;
 
-    let dt = document.createElement("p.dt");
+    let dt = document.createElement("p");
+    dt.classList.add('dt');
     let dp = document.createElement("p");
     let d_title = document.createTextNode(dishTitle);
     let d_price = document.createTextNode(price);
@@ -61,8 +62,7 @@ function unFav(event){
             // console.log("dishtitle",dishTitle);
             if (grandchild == dishTitle){
                 // console.log("match");
-                let matched = child;
-                favBox.remove(matched);
+                favBox.remove(child);
             };
         }
     }
