@@ -181,6 +181,39 @@ hr{
     width: 80vw;
 }
 
+/* favorites */
+
+#favorites{
+    /* sticky element at bottom that shows favorites */
+    position: sticky;
+    bottom: 0;
+    background-color: #98A48E;
+    border-top: 2px solid #F6F2F7;
+    border-bottom: 2px solid #F6F2F7;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+
+    p{
+        color: #F6F2F7;
+        font-family: "Epunda Sans", sans-serif;
+    }
+    p.dt{
+        font-weight: bold;
+        text-decoration: underline;
+        font-family: "Epunda Sans", sans-serif;
+    }
+    /* display: none; */
+
+    .fav_card{
+        border-radius: 7px 7px 0px 0px;
+        text-align: center;
+        padding: 1em;
+        max-width: 250px;
+    }
+}
+
+
 /* footer */
 
 footer{
@@ -346,8 +379,4 @@ p.caption{
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-}
-
-@media screen {
-    
 }
